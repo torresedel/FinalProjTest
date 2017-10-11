@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.admin.finalprojtest.MainActivity">
+
+    <EditText
+        android:id="@+id/teamName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Team Name" />
+
+    <EditText
+        android:id="@+id/teamMember1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Member 1" />
+
+    <EditText
+        android:id="@+id/teamMember2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Member 2" />
+
+    <EditText
+        android:id="@+id/teamMember3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Member 3" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="sendTeamInfo"
+        android:text="Input Team Info" />
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.admin.finalprojtest.MainActivity">
+
+    <EditText
+        android:gravity="center"
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="House Name" />
+
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Address" />
+
+    <EditText
+        android:id="@+id/numBedroom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Num Bedrooms"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/numBathroom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Num Bathroom"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/buildingManagerPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Building Manager Phone #"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/gateCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Gate Code"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/lockCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Lock Code"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/lat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Latitude"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/lng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Long"
+        android:inputType="number" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="sendToFirebase"
+        android:text="Push" />
+
+</LinearLayout>

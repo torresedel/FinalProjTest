@@ -8,29 +8,33 @@
     tools:context="com.example.admin.finalprojtest.MainActivity">
 
     <EditText
-        android:id="@+id/teamName"
+        android:id="@+id/etAddTeam_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:hint="Team Name" />
 
     <EditText
-        android:id="@+id/teamMember1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Member 1" />
+        android:hint="Add Member"/>
 
-    <EditText
-        android:id="@+id/teamMember2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Member 2" />
+    <Spinner
+        android:id="@+id/planets_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
 
-    <EditText
-        android:id="@+id/teamMember3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Member 3" />
+    <!--<EditText-->
+        <!--android:id="@+id/tvAddTeam_member2"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="Member 2" />-->
+
+    <!--<EditText-->
+        <!--android:id="@+id/tvAddTeam_member3"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="Member 3" />-->
 
     <Button
         android:layout_width="match_parent"

@@ -11,13 +11,13 @@ public class PersonalInfoClass {
     int ID;
     String fName;
     String lName;
-    int phoneNum;
+    String phoneNum;
     int emergencyName;
     int emergencyPhoneNum;
     Date joinDate;
     String TechnologyBatch;
 
-    public PersonalInfoClass(int ID, String fName, String lName, int phoneNum, int emergencyName, int emergencyPhoneNum, Date joinDate, String technologyBatch) {
+    public PersonalInfoClass(int ID, String fName, String lName, String phoneNum, int emergencyName, int emergencyPhoneNum, Date joinDate, String technologyBatch) {
         this.ID = ID;
         this.fName = fName;
         this.lName = lName;
@@ -52,11 +52,11 @@ public class PersonalInfoClass {
         this.lName = lName;
     }
 
-    public int getPhoneNum() {
+    public String getPhoneNum() {
         return phoneNum;
     }
 
-    public void setPhoneNum(int phoneNum) {
+    public void setPhoneNum(String phoneNum) {
         this.phoneNum = phoneNum;
     }
 

@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 
+import com.example.admin.finalprojtest.data.FinanceInfoClass;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -58,6 +60,13 @@ public class FinanceInfoActivity extends AppCompatActivity {
     @BindView(R.id.etAddFinance_payDate)
     EditText etAddFinancePayDate;
 
+    @BindView(R.id.etAddFinance_expensePay)
+    EditText etAddFinanceExpensesPay;
+    @BindView(R.id.etAddFinance_advancePay)
+    EditText etAddFinanceAdvancesPay;
+    @BindView(R.id.etAddFinance_advanceDeduction)
+    EditText etAddFinanceAdvancesDeduction;
+
     FinanceInfoClass financeInfoClass;
 
     @Override
@@ -90,6 +99,10 @@ public class FinanceInfoActivity extends AppCompatActivity {
         float longTermDisabilityInsurance = Float.valueOf(etAddFinanceLongTermDisabilityInsurance.getText().toString());
         float lifeInsurance = Float.valueOf(etAddFinanceLifeInsurance.getText().toString());
 
+        float expensesPay = Float.valueOf(etAddFinanceExpensesPay.getText().toString());
+        float advancesPay = Float.valueOf(etAddFinanceAdvancesPay.getText().toString());
+        float advancesDeduction = Float.valueOf(etAddFinanceAdvancesDeduction.getText().toString());
+
         SimpleDateFormat df = new SimpleDateFormat("mm/dd/yyyy");
 
         Date dateFrom = null;
@@ -112,13 +125,14 @@ public class FinanceInfoActivity extends AppCompatActivity {
         }
 
 
-        financeInfoClass = new FinanceInfoClass(totalHours, holidayHours, ptoUsedHours,
-                overtimeHours,
+        financeInfoClass = new FinanceInfoClass(totalHours, holidayHours, ptoUsedHours, overtimeHours,
                 hourlyRate, overtimeRate,
                 federalTax, stateTax, socialSecurityTax, medicareTax,
                 medicalInsurance, visionInsurance, dentalInsurance,
                 shortTermDisabilityInsurance, longTermDisabilityInsurance, lifeInsurance,
-                dateFrom, dateTo, payDate);
+                dateFrom, dateTo, payDate,
+                expensesPay, advancesPay, advancesDeduction,
+                getTotalPay(), getTotalGrossHours(), getTotalGrossPay());
 
     }
 
@@ -146,17 +160,22 @@ public class FinanceInfoActivity extends AppCompatActivity {
         float longTermDisabilityInsurance = Float.valueOf(etAddFinanceLongTermDisabilityInsurance.getText().toString());
         float lifeInsurance = Float.valueOf(etAddFinanceLifeInsurance.getText().toString());
 
+        float expensesPay = Float.valueOf(etAddFinanceExpensesPay.getText().toString());
+        float advancesPay = Float.valueOf(etAddFinanceAdvancesPay.getText().toString());
+        float advancesDeduction = Float.valueOf(etAddFinanceAdvancesDeduction.getText().toString());
+
         totalPay = (totalHours + holidayHours + ptoUsedHours) * hourlyRate
                 + (overtimeRate * overtimeHours)
                 - federalTax - stateTax - socialSecurityTax - medicareTax
                 - medicalInsurance - visionInsurance - dentalInsurance
                 - shortTermDisabilityInsurance - longTermDisabilityInsurance
-                - lifeInsurance;
+                - lifeInsurance
+                + expensesPay + advancesPay - advancesDeduction;
 
         return totalPay;
     }
 
-    float totalGrossPay(){
+    float getTotalGrossPay() {
 
         float totalGrossPay;
 
@@ -165,17 +184,21 @@ public class FinanceInfoActivity extends AppCompatActivity {
         float ptoUsedHours = Float.valueOf(etAddFinancePto.getText().toString());
         float overtimeHours = Float.valueOf(etAddFinanceOvertimeHours.getText().toString());
 
-
         float hourlyRate = Float.valueOf(etAddFinanceHourlyRate.getText().toString());
         float overtimeRate = Float.valueOf(etAddFinanceOvertimeRate.getText().toString());
 
+        float expensesPay = Float.valueOf(etAddFinanceExpensesPay.getText().toString());
+        float advancesPay = Float.valueOf(etAddFinanceAdvancesPay.getText().toString());
+
+
         totalGrossPay = (totalHours + holidayHours + ptoUsedHours) * hourlyRate
-                + (overtimeRate * overtimeHours);
+                + (overtimeRate * overtimeHours)
+                + expensesPay + advancesPay;
 
         return totalGrossPay;
     }
 
-    float totalGrossHours(){
+    float getTotalGrossHours() {
 
         float totalGrossHours;
 
@@ -185,7 +208,7 @@ public class FinanceInfoActivity extends AppCompatActivity {
         float overtimeHours = Float.valueOf(etAddFinanceOvertimeHours.getText().toString());
 
 
-        totalGrossHours = totalHours + holidayHours + ptoUsedHours+ overtimeHours;
+        totalGrossHours = totalHours + holidayHours + ptoUsedHours + overtimeHours;
 
         return totalGrossHours;
     }

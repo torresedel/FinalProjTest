@@ -1,16 +1,23 @@
 package com.example.admin.finalprojtest;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+
+import java.net.URI;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,24 +43,59 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.team_info_input);
+        setContentView(R.layout.image_to_storage);
         //ButterKnife.bind(this);
 
         Intent intent = new Intent();
         intent.setClass(this, FinanceInfoActivity.class);
-        startActivity(intent);
+        //startActivity(intent);
     }
 
-    TeamInfo teamInfo;
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode == GALLERY_INTENT && resultCode == RESULT_OK){
+            Uri uri = data.getData();
+
+            StorageReference filepath = mStorageRef.child("Photos").child(uri.getLastPathSegment());
+
+            filepath.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                @Override
+                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                    Toast.makeText(MainActivity.this, "Upload Successful", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+    }
+
+    /*TeamInfo teamInfo;
 
     EditText teamName;
     EditText teamMember1;
     EditText teamMember2;
-    EditText teamMember3;
+    EditText teamMember3;*/
 
-    public void sendTeamInfo(View view) {
+    protected Bitmap img = null;
+    static final int CAM_REQUEST = 1;
+    ImageView ivImage;
+    private StorageReference mStorageRef;
+    private static final int GALLERY_INTENT = 2;
 
-        if (teamName != null
+    public void sendImageFirebase(View view) {
+
+        mStorageRef = FirebaseStorage.getInstance().getReference();
+
+        Intent intent = new Intent(Intent.ACTION_PICK);
+
+        intent.setType("image/*");
+
+        startActivityForResult(intent, GALLERY_INTENT);
+
+    }
+
+
+        /*if (teamName != null
                 && teamMember1 != null
                 && teamMember2 != null
                 && teamMember3 != null) {
@@ -66,9 +108,9 @@ public class MainActivity extends AppCompatActivity {
             members.add(teamMember3.getText().toString());
 
             teamInfo = new TeamInfo(tName, members);
-        }
+        }*/
 
-    }
+}
 
 
 
@@ -88,4 +130,4 @@ public class MainActivity extends AppCompatActivity {
         HousingInfoClass housing = new HousingInfoClass(name, address, numBedroom, numBathroom, buildingManagerPhone, gateCode, lockCode, lat, lng);
 
     }*/
-}
+

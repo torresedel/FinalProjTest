@@ -1,4 +1,4 @@
-package com.example.admin.finalprojtest;
+package com.example.admin.finalprojtest.data;
 
 import java.util.Date;
 
@@ -10,51 +10,76 @@ public class FinanceInfoClass {
 
     private float totalHours;
     private float holidayHours;
-    private float pto;
+    private float ptoUsedHours;
     private float overtimeHours;
+
     private float hourlyRate;
     private float overtimeRate;
+
     private float federalTax;
     private float stateTax;
     private float socialSecurityTax;
     private float medicareTax;
+
     private float medicalInsurance;
     private float visionInsurance;
     private float dentalInsurance;
     private float shortTermDisabilityInsurance;
     private float longTermDisabilityInsurance;
     private float lifeInsurance;
+
     private Date from;
     private Date to;
     private Date payDate;
 
-    FinanceInfoClass(float totalHours, float holidayHours, float pto,
-                     float overtimeHours,
-                     float hourlyRate, float overtimeRate,
-                     float federalTax, float stateTax, float socialSecurityTax, float medicareTax,
-                     float medicalInsurance, float visionInsurance, float dentalInsurance,
-                     float shortTermDisabilityInsurance, float longTermDisabilityInsurance, float lifeInsurance,
-                     Date from, Date to, Date payDate) {
+    private float expensesPay;
+    private float advancesPay;
+    private float advancesDeduction;
+
+    private float totalPay;
+    private float totalGrossHours;
+    private float totalGrossPay;
+
+    public FinanceInfoClass(float totalHours, float holidayHours, float ptoUsedHours, float overtimeHours,
+                            float hourlyRate, float overtimeRate,
+                            float federalTax, float stateTax, float socialSecurityTax, float medicareTax,
+                            float medicalInsurance, float visionInsurance, float dentalInsurance,
+                            float shortTermDisabilityInsurance, float longTermDisabilityInsurance, float lifeInsurance,
+                            Date from, Date to, Date payDate,
+                            float expensesPay, float advancesPay, float advancesDeduction,
+                            float totalPay, float totalGrossHours, float totalGrossPay) {
 
         this.totalHours = totalHours;
         this.holidayHours = holidayHours;
-        this.pto = pto;
+        this.ptoUsedHours = ptoUsedHours;
         this.overtimeHours = overtimeHours;
+
         this.hourlyRate = hourlyRate;
         this.overtimeRate = overtimeRate;
+
         this.federalTax = federalTax;
         this.stateTax = stateTax;
         this.socialSecurityTax = socialSecurityTax;
         this.medicareTax = medicareTax;
+
         this.medicalInsurance = medicalInsurance;
         this.visionInsurance = visionInsurance;
         this.dentalInsurance = dentalInsurance;
         this.shortTermDisabilityInsurance = shortTermDisabilityInsurance;
         this.longTermDisabilityInsurance = longTermDisabilityInsurance;
         this.lifeInsurance = lifeInsurance;
+
         this.from = from;
         this.to = to;
         this.payDate = payDate;
+
+        this.expensesPay = expensesPay;
+        this.advancesPay = advancesPay;
+        this.advancesDeduction = advancesDeduction;
+
+        this.totalPay = totalPay;
+        this.totalGrossHours = totalGrossHours;
+        this.totalGrossPay = totalGrossPay;
     }
 
     public float getTotalHours() {
@@ -73,12 +98,12 @@ public class FinanceInfoClass {
         this.holidayHours = holidayHours;
     }
 
-    public float getPto() {
-        return pto;
+    public float getPtoUsedHours() {
+        return ptoUsedHours;
     }
 
-    public void setPto(float pto) {
-        this.pto = pto;
+    public void setPtoUsedHours(float ptoUsedHours) {
+        this.ptoUsedHours = ptoUsedHours;
     }
 
     public float getOvertimeHours() {
@@ -208,4 +233,53 @@ public class FinanceInfoClass {
     public void setPayDate(Date payDate) {
         this.payDate = payDate;
     }
+
+    public float getExpensesPay() {
+        return expensesPay;
+    }
+
+    public void setExpensesPay(float expensesPay) {
+        this.expensesPay = expensesPay;
+    }
+
+    public float getAdvancesPay() {
+        return advancesPay;
+    }
+
+    public void setAdvancesPay(float advancesPay) {
+        this.advancesPay = advancesPay;
+    }
+
+    public float getAdvancesDeduction() {
+        return advancesDeduction;
+    }
+
+    public void setAdvancesDeduction(float advancesDeduction) {
+        this.advancesDeduction = advancesDeduction;
+    }
+
+    public float getTotalPay() {
+        return totalPay;
+    }
+
+    public void setTotalPay(float totalPay) {
+        this.totalPay = totalPay;
+    }
+
+    public float getTotalGrossHours() {
+        return totalGrossHours;
+    }
+
+    public void setTotalGrossHours(float totalGrossHours) {
+        this.totalGrossHours = totalGrossHours;
+    }
+
+    public float getTotalGrossPay() {
+        return totalGrossPay;
+    }
+
+    public void setTotalGrossPay(float totalGrossPay) {
+        this.totalGrossPay = totalGrossPay;
+    }
+
 }

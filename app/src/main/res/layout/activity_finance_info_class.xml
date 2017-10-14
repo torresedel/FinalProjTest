@@ -160,18 +160,25 @@
             android:textSize="25sp" />
 
         <EditText
-            android:id="@+id/etAddFinance_expenses"
+            android:id="@+id/etAddFinance_expensePay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Expenses"
-            android:inputType="date" />
+            android:hint="Expense Pay"
+            android:inputType="numberDecimal" />
 
         <EditText
-            android:id="@+id/etAddFinance_advance"
+            android:id="@+id/etAddFinance_advancePay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Advances"
-            android:inputType="date" />
+            android:hint="Advance Pay"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etAddFinance_advanceDeduction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Advances Deduction"
+            android:inputType="numberDecimal" />
 
         <!--.................................................-->
 

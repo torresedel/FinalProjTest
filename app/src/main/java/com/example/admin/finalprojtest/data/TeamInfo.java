@@ -1,4 +1,4 @@
-package com.example.admin.finalprojtest;
+package com.example.admin.finalprojtest.data;
 
 import java.util.List;
 

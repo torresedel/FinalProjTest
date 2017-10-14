@@ -1,4 +1,4 @@
-package com.example.admin.finalprojtest;
+package com.example.admin.finalprojtest.data;
 
 /**
  * Created by Admin on 10/10/2017.

@@ -18,7 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FinanceInfoActivity"></activity>
+        <activity android:name=".FinanceInfoActivity" />
+        <activity android:name=".Earnings_Activity"></activity>
     </application>
 
 </manifest>

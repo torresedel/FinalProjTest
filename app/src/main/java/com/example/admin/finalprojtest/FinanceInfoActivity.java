@@ -124,7 +124,7 @@ public class FinanceInfoActivity extends AppCompatActivity {
 
     float getTotalPay() {
 
-        float total;
+        float totalPay;
 
         float totalHours = Float.valueOf(etAddFinanceTotalHours.getText().toString());
         float holidayHours = Float.valueOf(etAddFinanceHolidayHours.getText().toString());
@@ -146,13 +146,32 @@ public class FinanceInfoActivity extends AppCompatActivity {
         float longTermDisabilityInsurance = Float.valueOf(etAddFinanceLongTermDisabilityInsurance.getText().toString());
         float lifeInsurance = Float.valueOf(etAddFinanceLifeInsurance.getText().toString());
 
-        total = (totalHours + holidayHours + ptoUsedHours) * hourlyRate
+        totalPay = (totalHours + holidayHours + ptoUsedHours) * hourlyRate
                 + (overtimeRate * overtimeHours)
                 - federalTax - stateTax - socialSecurityTax - medicareTax
                 - medicalInsurance - visionInsurance - dentalInsurance
                 - shortTermDisabilityInsurance - longTermDisabilityInsurance
                 - lifeInsurance;
 
-        return total;
+        return totalPay;
+    }
+
+    float totalGrossPay(){
+
+        float totalGrossPay;
+
+        float totalHours = Float.valueOf(etAddFinanceTotalHours.getText().toString());
+        float holidayHours = Float.valueOf(etAddFinanceHolidayHours.getText().toString());
+        float ptoUsedHours = Float.valueOf(etAddFinancePto.getText().toString());
+        float overtimeHours = Float.valueOf(etAddFinanceOvertimeHours.getText().toString());
+
+
+        float hourlyRate = Float.valueOf(etAddFinanceHourlyRate.getText().toString());
+        float overtimeRate = Float.valueOf(etAddFinanceOvertimeRate.getText().toString());
+
+        totalGrossPay = (totalHours + holidayHours + ptoUsedHours) * hourlyRate
+                + (overtimeRate * overtimeHours);
+
+        return totalGrossPay;
     }
 }

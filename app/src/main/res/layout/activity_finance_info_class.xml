@@ -156,6 +156,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:text="Extra"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/etAddFinance_expenses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Expenses"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/etAddFinance_advance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Advances"
+            android:inputType="date" />
+
+        <!--.................................................-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="Dates"
             android:textSize="25sp" />
 

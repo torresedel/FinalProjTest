@@ -174,4 +174,19 @@ public class FinanceInfoActivity extends AppCompatActivity {
 
         return totalGrossPay;
     }
+
+    float totalGrossHours(){
+
+        float totalGrossHours;
+
+        float totalHours = Float.valueOf(etAddFinanceTotalHours.getText().toString());
+        float holidayHours = Float.valueOf(etAddFinanceHolidayHours.getText().toString());
+        float ptoUsedHours = Float.valueOf(etAddFinancePto.getText().toString());
+        float overtimeHours = Float.valueOf(etAddFinanceOvertimeHours.getText().toString());
+
+
+        totalGrossHours = totalHours + holidayHours + ptoUsedHours+ overtimeHours;
+
+        return totalGrossHours;
+    }
 }

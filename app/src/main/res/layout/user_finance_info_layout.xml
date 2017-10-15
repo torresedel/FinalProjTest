@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="start"
+        android:text="Deductions" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="end"
+        android:text="Total" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="end"
+        android:text="YTD Total" />
+
+    <!--Federal Tax-->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="start"
+        android:text="Federal Tax" />
+
+    <TextView
+        android:id="@+id/tvPayStub_federalTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="end"
+        android:text="$31.39" />
+
+    <TextView
+        android:id="@+id/tvPayStub_ytdFederalTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="end"
+        android:text="$941.77" />
+
+    <!--State Tax-->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="start"
+        android:text="State Tax" />
+
+    <TextView
+        android:id="@+id/tvPayStub_stateTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="end"
+        android:text="$31.39" />
+
+    <TextView
+        android:id="@+id/tvPayStub_ytdStateTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="end"
+        android:text="$941.77" />
+
+    <!--Social Security Tax-->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="start"
+        android:text="Social Security" />
+
+    <TextView
+        android:id="@+id/tvPayStub_socialSecurityTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="end"
+        android:text="$31.39" />
+
+    <TextView
+        android:id="@+id/tvPayStub_ytdSocialSecurityTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="end"
+        android:text="$941.77" />
+
+    <!--Medicare Tax-->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="start"
+        android:text="Medicare" />
+
+    <TextView
+        android:id="@+id/tvPayStub_medicareTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="end"
+        android:text="$31.39" />
+
+    <TextView
+        android:id="@+id/tvPayStub_ytdMedicareTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="end"
+        android:text="$941.77" />
+
+    <!--Spacer-->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="3"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="start" />
+
+    <!--Medical Insurance-->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="start"
+        android:text="Medical Ins." />
+
+    <TextView
+        android:id="@+id/tvPayStub_medicalInsurance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="end"
+        android:text="$31.39" />
+
+    <TextView
+        android:id="@+id/tvPayStub_ytdMedicalInsurance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="end"
+        android:text="$951.77" />
+
+    <!--Vision Ins.-->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="start"
+        android:text="Vision Ins." />
+
+    <TextView
+        android:id="@+id/tvPayStub_visionInsurance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="end"
+        android:text="$31.39" />
+
+    <TextView
+        android:id="@+id/tvPayStub_ytdVisualInsurance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="end"
+        android:text="$941.77" />
+
+    <!--Dental Ins.-->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="start"
+        android:text="Dental Ins." />
+
+    <TextView
+        android:id="@+id/tvPayStub_dentalInsurance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="end"
+        android:text="$31.39" />
+
+    <TextView
+        android:id="@+id/tvPayStub_ytdDentalInsurance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="end"
+        android:text="$941.77" />
+
+    <!--Short Term Disability Ins.-->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="start"
+        android:text="ST Disability Ins." />
+
+    <TextView
+        android:id="@+id/tvPayStub_stDisability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="end"
+        android:text="$31.39" />
+
+    <TextView
+        android:id="@+id/tvPayStub_ytdSTDisability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="end"
+        android:text="$941.77" />
+
+    <!--Long Term Disability Ins.-->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="start"
+        android:text="LT Disability Ins." />
+
+    <TextView
+        android:id="@+id/tvPayStub_ltDisability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="end"
+        android:text="$31.39" />
+
+    <TextView
+        android:id="@+id/tvPayStub_ytdLTDisability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="end"
+        android:text="$941.77" />
+
+    <!--Life Ins.-->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="start"
+        android:text="Life Ins." />
+
+    <TextView
+        android:id="@+id/tvPayStub_lifeInsurance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="end"
+        android:text="$31.39" />
+
+    <TextView
+        android:id="@+id/tvPayStub_ytdLifeDisability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="end"
+        android:text="$941.77" />
+
+    <!--Spacer-->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="3"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="start" />
+
+    <!--Advances Deducted-->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="start"
+        android:text="Advances" />
+
+    <TextView
+        android:id="@+id/tvPayStub_advancesDeduction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="end"
+        android:text="$31.39" />
+
+    <TextView
+        android:id="@+id/tvPayStub_ytdAdvancesDeduction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="end"
+        android:text="$941.77" />
+
+    <!--Spacer-->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="3"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="start" />
+
+    <!--Total Deductions-->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="start"
+        android:text="Total Deductions" />
+
+    <TextView
+        android:id="@+id/tvPayStub_totalDeduction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="end"
+        android:text="$31.39" />
+
+    <TextView
+        android:id="@+id/tvPayStub_ytdTotalDeduction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:gravity="end"
+        android:text="$941.77" />
+
+
+</LinearLayout>
+

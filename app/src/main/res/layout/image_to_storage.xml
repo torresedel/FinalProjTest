@@ -14,4 +14,13 @@
         android:onClick="sendImageFirebase"
         android:text="Select From Gallery" />
 
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Request Expense"
+        android:onClick="requestAdvance"/>
+
+
+
 </LinearLayout>

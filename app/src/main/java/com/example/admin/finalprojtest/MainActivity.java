@@ -1,11 +1,15 @@
 package com.example.admin.finalprojtest;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -15,9 +19,10 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-import java.net.URI;
+import java.util.Objects;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,17 +50,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.image_to_storage);
         //ButterKnife.bind(this);
+        //ButterKnife.bind(this);
 
         Intent intent = new Intent();
         intent.setClass(this, FinanceInfoActivity.class);
-        //startActivity(intent);
+        startActivity(intent);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if(requestCode == GALLERY_INTENT && resultCode == RESULT_OK){
+        if (requestCode == GALLERY_INTENT && resultCode == RESULT_OK) {
             Uri uri = data.getData();
 
             StorageReference filepath = mStorageRef.child("Photos").child(uri.getLastPathSegment());
@@ -91,8 +97,8 @@ public class MainActivity extends AppCompatActivity {
         intent.setType("image/*");
 
         startActivityForResult(intent, GALLERY_INTENT);
-
     }
+
 
 
         /*if (teamName != null
